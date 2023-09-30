@@ -2,6 +2,17 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
+/*
+* Time Complexity:
+*  building the map is O(n log n)
+*  sorting is O(n log n)
+*  the loop that itreates over the 'arr' vector and dowing 'map.lower_bound' is O(n log n)
+*  Total is O(n log n)
+*  Space complexity:
+*  creating the map ans the 'res' vector is O(n) space
+*  Total is O(n)
+*/
 class Solution {
 public:
     vector<int> findRightInterval(vector<vector<int>>& arr) {
