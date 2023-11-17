@@ -59,6 +59,24 @@ void count_sort(vector<int> &v){
     }
 }
 
+
+/// Time complexity: O(n^2)
+/// Space complexity: O(1)
+
+void bubble_sort(vector<int>& nums) {
+    
+    int sz = nums.size();
+    for(int i = 0 ; i < sz ; i++){
+        bool swapped = false;
+        for(int j = 0 ; j < sz - i - 1 ; j++){
+            if(nums[j] > nums[j+1])
+                swap(nums[j], nums[j+1]); 
+            
+        }
+    }
+        
+}
+
 void print(vector<int> &v){
     
     for(auto val : v){
@@ -72,10 +90,12 @@ int main(){
     vector<int> insertion_v = {40,23,0,-40,-30,100,-15,99};
     vector<int> selection_v = {40,23,0,-40,-30,100,-15,99};
     vector<int> count_v     = {40,23,0,-40,-30,100,-15,99};
+    vector<int> bubble_v     = {40,23,0,-40,-30,100,-15,99};
     
     insertion_sort(insertion_v);
     selection_sort(selection_v);
     count_sort(count_v);
+    bubble_sort(bubble_v);
 
     cout<<"insertion sort: \n";
     print(insertion_v);
@@ -83,5 +103,7 @@ int main(){
     print(selection_v);
     cout<<"count sort: \n";
     print(count_v);
+    cout<<"Bubble sort: \n";
+    print(bubble_v);
 
 }
